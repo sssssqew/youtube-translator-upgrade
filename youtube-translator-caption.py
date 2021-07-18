@@ -11,6 +11,7 @@
 # json.decoder.JSONDecodeError: Extra data 
 # C:\Users\이성용\AppData\Local\Programs\Python\Python39\Lib\site-packages\google_trans_new 폴더 내에 google_trans_new.py 151 행 코드 변경하기
 # (decoded_line + ']') 를 decoded_line 으로 변경하기
+# python youtube-translator-caption.py 로 실행하면 됨
 
 import os
 from google_trans_new import google_translator # 문제가 좀 있음
