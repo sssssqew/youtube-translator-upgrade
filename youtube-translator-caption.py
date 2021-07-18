@@ -5,6 +5,13 @@
 
 # 주의사항 : 캡션을 달때는 무조건 한줄로 작성하기 => 아니면 캡션 다운로드한 다음에 한줄로 변경하기
 
+# 파이썬 버전을 업그레이드하면 google_trans_new 를 인식 못할수 있음 => 커맨드창에서 파이썬 버전을 변경해줘야함 py -3.91 youtube-translator-caption.py
+# 파이썬 3.9.1에서는 모듈을 인식하지만 3.9.6에서는 인식하지 못함
+
+# json.decoder.JSONDecodeError: Extra data 
+# C:\Users\이성용\AppData\Local\Programs\Python\Python39\Lib\site-packages\google_trans_new 폴더 내에 google_trans_new.py 151 행 코드 변경하기
+# (decoded_line + ']') 를 decoded_line 으로 변경하기
+
 import os
 from google_trans_new import google_translator # 문제가 좀 있음
 
@@ -23,7 +30,7 @@ createFolder(directory_to_save_captions)
 
 
 filename = 'captions.srt' # 유튜브 영상에서 다운받은 자막파일 이름
-src_lang = 'ko'
+src_lang = 'en'
 tgt_lang_array = ['en', 'zh-cn', 'zh-tw', 'hi', 'ru',
                              'ja', 'de', 'th', 'id', 'ms', 'vi', 'tl',
                              'fi', 'fr', 'pl',  'pt', 'es', 'tr', 'it',
